@@ -39,6 +39,7 @@ public class D4 {
     // read input based on element
     try {
       Scanner in = new Scanner(inFile);
+      System.out.println();
       while (in.hasNextLine()) {
         String nextLine = in.nextLine();
         String[] line = nextLine.split(" ");
@@ -51,7 +52,7 @@ public class D4 {
             String c = Character.toString(line[i].charAt(j)).toUpperCase();
             String c2 = "";
             if (j + 1 < line[i].length())
-              c2 = Character.toString(line[i].charAt(j+1));
+              c2 = Character.toString(line[i].charAt(j+1)).toLowerCase();
             String con = c.concat(c2);
             if(map.containsKey(c)) {
               toAdd.append(c).append(" - ");
